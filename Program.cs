@@ -19,8 +19,13 @@ var isContainsNine = ids.Contains(9);
 
 var CountCategory = products.GroupBy(x => x.Category);
 
+var NamesOnCategory = products.GroupBy(x => x.Category);
 
-foreach (var item in LowUnitPrice)
+foreach (var item in NamesOnCategory)
 {
-    Console.WriteLine($"{item.Key}:{item.Count()}");
+    Console.WriteLine($"{item.Key} : ");
+    foreach (var names in item)
+    {
+        Console.Write($"{names.ProductName} ,");
+    }
 }
