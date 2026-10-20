@@ -6,7 +6,9 @@ var customers = Source.CustomerList;
 
 var highestThreePrices = products.OrderBy(s => s.UnitPrice).Take(3);
 
-foreach (var product in highestThreePrices)
+var secondPage = products.Skip(5).Take(5);
+
+foreach (var product in secondPage)
 {
-    Console.WriteLine($"{product.ProductName} , {product.UnitPrice}");
+    Console.WriteLine($"{product.ProductID},{product.ProductName} , {product.UnitPrice}");
 }
