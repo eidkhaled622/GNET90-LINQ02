@@ -16,7 +16,11 @@ var AllSeaFoodCondition = products.Where(x => x.Category == "Seafood").Any(u => 
 int[] ids = { 3, 9, 13, 18 };
 
 var isContainsNine = ids.Contains(9);
-// foreach (var item in LowUnitPrice)
-// {
-Console.WriteLine($"{isContainsNine}");
-// }
+
+var CountCategory = products.GroupBy(x => x.Category);
+
+
+foreach (var item in LowUnitPrice)
+{
+    Console.WriteLine($"{item.Key}:{item.Count()}");
+}
