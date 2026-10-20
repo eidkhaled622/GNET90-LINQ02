@@ -21,11 +21,10 @@ var CountCategory = products.GroupBy(x => x.Category);
 
 var NamesOnCategory = products.GroupBy(x => x.Category);
 
-foreach (var item in NamesOnCategory)
+var CategoriesProduct = products.GroupBy(x => x.Category)
+    .Where(c => c.Select(p => p.ProductName).Distinct().Count() > 3);
+
+foreach (var item in CategoriesProduct)
 {
-    Console.WriteLine($"{item.Key} : ");
-    foreach (var names in item)
-    {
-        Console.Write($"{names.ProductName} ,");
-    }
+    Console.WriteLine($"{item.Key} : {item.Count()}");
 }
