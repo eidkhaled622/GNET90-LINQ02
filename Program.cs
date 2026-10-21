@@ -47,7 +47,13 @@ int[] setB = { 3, 6, 9, 12, 15, 13 };
 
 var SetAException = setA.Except(setB);
 
-foreach (var item in SetAException)
+
+string[] list1 = { "Germany", "France", "UK", "Spain" };
+string[] list2 = { "france", "SPAIN", "Italy" };
+
+var getDistinctList1 = list1.Except(list2, StringComparer.OrdinalIgnoreCase);
+
+foreach (var item in getDistinctList1)
 {
     Console.WriteLine($"{item}");
 }

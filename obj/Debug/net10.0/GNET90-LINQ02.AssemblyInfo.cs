@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GNET90-LINQ02")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4958dc6617f73c56956347a1581ab790d010408")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8531b58294fb2a8674c2b4f5a4f035a904e4aaa5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GNET90-LINQ02")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GNET90-LINQ02")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
