@@ -37,7 +37,11 @@ var CustomerCountry =
 
 var getTheTotalItemsInStock = products.Sum(p => p.UnitsInStock);
 
+var maxPrice = products.Max(m => m.UnitPrice);
+var minPrice = products.Min(m => m.UnitPrice);
+
 // foreach (var item in CustomerCountry)
 // {
-Console.WriteLine($"{getTheTotalItemsInStock}");
+Console.WriteLine($"{maxPrice}");
+Console.WriteLine($"{minPrice}");
 // }
