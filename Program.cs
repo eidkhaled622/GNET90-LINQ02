@@ -59,7 +59,10 @@ var getTheFirstHighestPrice = products.FirstOrDefault(x => x.UnitPrice > 50);
 
 var getThePriceHigherThan500 = products.FirstOrDefault(x => x.UnitPrice > 500, null);
 
+var row = Enumerable.Range(1, 10).Select((n) => 7 * n);
+
+
 // foreach (var item in getDistinctList1)
 // {
-Console.WriteLine($"{getThePriceHigherThan500}");
+Console.WriteLine($"{string.Join(", ", row)}");
 // }
