@@ -53,7 +53,9 @@ string[] list2 = { "france", "SPAIN", "Italy" };
 
 var getDistinctList1 = list1.Except(list2, StringComparer.OrdinalIgnoreCase);
 
-foreach (var item in getDistinctList1)
-{
-    Console.WriteLine($"{item}");
-}
+Dictionary<int, Product> productDict = products.ToDictionary(p => p.ProductID);
+
+// foreach (var item in getDistinctList1)
+// {
+Console.WriteLine($"{productDict[18].ProductName}");
+// }
