@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using LINQ.DataSources;
 using LINQ.Models;
 
@@ -24,7 +25,17 @@ var NamesOnCategory = products.GroupBy(x => x.Category);
 var CategoriesProduct = products.GroupBy(x => x.Category)
     .Where(c => c.Select(p => p.ProductName).Distinct().Count() > 3);
 
-foreach (var item in CategoriesProduct)
+var CustomerCountry =
+    from customer in customers
+    group customer by customer.Country into g
+    select new
+    {
+        Country = g.Key,
+        Count = g.Count(),
+        TotalOrderValue = g.Sum(s => s.Orders.Sum(sub => sub.Total))
+    };
+
+foreach (var item in CustomerCountry)
 {
-    Console.WriteLine($"{item.Key} : {item.Count()}");
+    Console.WriteLine($"{item.Country} : {item.Count} : {item.TotalOrderValue}");
 }
