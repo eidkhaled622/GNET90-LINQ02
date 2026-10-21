@@ -61,8 +61,9 @@ var getThePriceHigherThan500 = products.FirstOrDefault(x => x.UnitPrice > 500, n
 
 var row = Enumerable.Range(1, 10).Select((n) => 7 * n);
 
+var EvenNumbers = Enumerable.Range(1, 30).Where(x => x % 2 == 0);
 
 // foreach (var item in getDistinctList1)
 // {
-Console.WriteLine($"{string.Join(", ", row)}");
+Console.WriteLine($"{string.Join(", ", EvenNumbers)}");
 // }
