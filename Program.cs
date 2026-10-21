@@ -42,7 +42,12 @@ var minPrice = products.Min(m => m.UnitPrice);
 
 var DistinctCategory = products.Select(x => x.Category).Distinct();
 
-foreach (var item in DistinctCategory)
+int[] setA = { 1, 3, 5, 7, 9, 11, 13 };
+int[] setB = { 3, 6, 9, 12, 15, 13 };
+
+var SetAException = setA.Except(setB);
+
+foreach (var item in SetAException)
 {
     Console.WriteLine($"{item}");
 }
