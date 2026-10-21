@@ -55,7 +55,9 @@ var getDistinctList1 = list1.Except(list2, StringComparer.OrdinalIgnoreCase);
 
 Dictionary<int, Product> productDict = products.ToDictionary(p => p.ProductID);
 
+var getTheFirstHighestPrice = products.FirstOrDefault(x => x.UnitPrice > 50);
+
 // foreach (var item in getDistinctList1)
 // {
-Console.WriteLine($"{productDict[18].ProductName}");
+Console.WriteLine($"{getTheFirstHighestPrice}");
 // }
