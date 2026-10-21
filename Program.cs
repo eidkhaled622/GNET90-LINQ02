@@ -35,7 +35,9 @@ var CustomerCountry =
         TotalOrderValue = g.Sum(s => s.Orders.Sum(sub => sub.Total))
     };
 
-foreach (var item in CustomerCountry)
-{
-    Console.WriteLine($"{item.Country} : {item.Count} : {item.TotalOrderValue}");
-}
+var getTheTotalItemsInStock = products.Sum(p => p.UnitsInStock);
+
+// foreach (var item in CustomerCountry)
+// {
+Console.WriteLine($"{getTheTotalItemsInStock}");
+// }
