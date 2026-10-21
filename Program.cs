@@ -63,7 +63,9 @@ var row = Enumerable.Range(1, 10).Select((n) => 7 * n);
 
 var EvenNumbers = Enumerable.Range(1, 30).Where(x => x % 2 == 0);
 
-// foreach (var item in getDistinctList1)
+var ConcatinateProductAndCustomers = products.Select(p => p.ProductName).Take(3).Concat(customers.Select(c => c.CustomerName).Take(3));
+
+// foreach (var item in ConcatinateProductAndCustomers)
 // {
-Console.WriteLine($"{string.Join(", ", EvenNumbers)}");
+Console.WriteLine($"{string.Join(", ", ConcatinateProductAndCustomers)}");
 // }
