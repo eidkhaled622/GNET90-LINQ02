@@ -65,7 +65,9 @@ var EvenNumbers = Enumerable.Range(1, 30).Where(x => x % 2 == 0);
 
 var ConcatinateProductAndCustomers = products.Select(p => p.ProductName).Take(3).Concat(customers.Select(c => c.CustomerName).Take(3));
 
-// foreach (var item in ConcatinateProductAndCustomers)
-// {
-Console.WriteLine($"{string.Join(", ", ConcatinateProductAndCustomers)}");
-// }
+var CombineData = products.Zip(customers, (p, c) => $"{p.ProductName} Sold to : {c.CustomerName}");
+
+foreach (var item in CombineData)
+{
+    Console.WriteLine($"{item}");
+}
