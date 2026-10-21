@@ -57,7 +57,9 @@ Dictionary<int, Product> productDict = products.ToDictionary(p => p.ProductID);
 
 var getTheFirstHighestPrice = products.FirstOrDefault(x => x.UnitPrice > 50);
 
+var getThePriceHigherThan500 = products.FirstOrDefault(x => x.UnitPrice > 500, null);
+
 // foreach (var item in getDistinctList1)
 // {
-Console.WriteLine($"{getTheFirstHighestPrice}");
+Console.WriteLine($"{getThePriceHigherThan500}");
 // }
